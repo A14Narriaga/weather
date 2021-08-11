@@ -1,3 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap");
+$background-color: #0a2255;
+$primary-color: #90f1a0;
+$select-color: rgba(255, 255, 255, 0.829);
+$nav-color: rgb(39, 46, 44);
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
 body {
-    background-color: gray;
+  background: url("./cloud.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  backdrop-filter: blur(20px);
+  background-attachment: fixed;
+  height: 100%;
+  font-family: 'Source Sans Pro', sans-serif;
+  padding: 1rem;
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+    .title {
+      color: rgba(245, 245, 245, 0.849);
+      text-transform: uppercase;
+      letter-spacing: 0.5rem;
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      border-bottom: 3px solid rgba(245, 245, 245, 0.849);
+      padding-bottom: 0.5rem;
+      text-align: center;
+    }
+    .content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+    .card {
+      background-color: rgba(255, 255, 255, 0.226);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      color: rgba(245, 245, 245, 0.849);
+      padding: 2rem;
+      border-radius: 0.3rem;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+      h3 {
+        font-size: 3rem;
+        margin-bottom: 2rem;
+        letter-spacing: 0.1rem;
+      }
+      i {
+        font-size: 6rem;
+        margin-bottom: 2rem;
+        left: 0;
+        color: yellow;
+      }
+      p {
+        font-size: 2rem;
+        font-weight: lighter;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+    }
+    .citys {
+      background-color: rgba(255, 255, 255, 0.226);
+      border-radius: 0.3rem;
+      ul {
+        list-style: none;
+        padding: 0.5rem;
+        li {
+          color: rgba(245, 245, 245, 0.849);
+          font-size: 1.3rem;
+          text-align: center;
+          background-color: rgba(5, 61, 61, 0.808);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+          padding: 0.5rem;
+          border-radius: 0.3rem;
+          margin: 0.5rem;
+        }
+      }
+    }
+  }
 }

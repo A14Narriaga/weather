@@ -1,11 +1,16 @@
-import React from "react";
 import "../sass/App.scss";
+import Card from "./Card";
+import CitySelector from "./CitySelector";
 
 const App = () => {
   return (
-    <div>
-      <h1>hola</h1>
-    </div>
+    <section className="container">
+      <h1 className="title">Clima</h1>
+      <div className="content">
+        <Card />
+        <CitySelector />
+      </div>
+    </section>
   );
 };
 
