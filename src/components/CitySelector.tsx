@@ -1,19 +1,27 @@
+const CitySelector = ({
+  citys,
+  currentCity,
+  handleCurrentCity,
+}: {
+  citys: [];
+  currentCity: string;
+  handleCurrentCity: any;
+}) => {
+  return (
+    <section className="citys">
+      <ul>
+        {citys.map((city: string) => (
+          <li
+            className={currentCity === city ? "city-selected" : ""}
+            key={city}
+            onClick={() => handleCurrentCity(city)}
+          >
+            {city}
+          </li>
+        ))}
+      </ul>
+    </section>
+  );
+};
 
-
-
-const CitySelector = () => {
-    return (
-        <section className="citys">
-            <ul>
-                <li>CDMX</li>
-                <li>Guadalajara</li>
-                <li>Monterrey</li>
-                <li>Morelia</li>
-                <li>Tamaulipas</li>
-                <li>Torreon</li>
-            </ul>
-        </section>
-    )
-}
-
-export default CitySelector
+export default CitySelector;
