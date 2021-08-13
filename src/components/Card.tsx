@@ -3,10 +3,12 @@ import { useEffect } from "react";
 const Card = ({
   currentCity,
   currentTempC,
+  currentTempUnits,
   setCurrentTempC,
 }: {
   currentCity: string;
   currentTempC: string;
+  currentTempUnits: string;
   setCurrentTempC: any;
 }) => {
   useEffect(() => {
@@ -24,7 +26,10 @@ const Card = ({
       <h3>{currentCity}</h3>
       <i className="fas fa-sun"></i>
       <p>Soleado</p>
-      <h1>{currentTempC + "°C"}</h1>
+      <h1>
+        {(currentTempUnits === "°C" ? currentTempC : currentTempC + 32) +
+          currentTempUnits}
+      </h1>
     </section>
   );
 };

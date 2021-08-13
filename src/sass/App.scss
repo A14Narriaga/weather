@@ -4,6 +4,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  border: 0;
 }
 
 html {
@@ -13,7 +14,6 @@ html {
 body {
   height: 100%;
   font-family: "Source Sans Pro", sans-serif;
-  padding: 2rem;
   background-color: black;
   &::before {
     content: "";
@@ -30,10 +30,40 @@ body {
     filter: blur(20px);
     z-index: -1;
   }
+  header {
+    background-color: rgba(255, 255, 255, 0.226);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    padding: 0.5rem 0;
+    .header-container {
+      width: 635px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      h1 {
+        font-size: 1.8rem;
+        color: rgba(245, 245, 245, 0.849);
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+      }
+      .btn-temp {
+        width: 2rem;
+        height: 2rem;
+        border-radius: 99rem;
+        font-weight: bold;
+        background-color: rgba(245, 245, 245, 0.849);
+        font-size: 1.2rem;
+        transition: 0.3s linear;
+        &:hover {
+          cursor: pointer;
+          background-color: rgba(7, 102, 102, 0.808);
+          color: rgba(245, 245, 245, 0.849);
+        }
+      }
+    }
+  }
   .container {
-    max-width: 600px;
+    max-width: 700px;
     margin: 0 auto;
-    padding-bottom: 2rem;
+    padding: 2rem;
     .title {
       color: rgba(245, 245, 245, 0.849);
       text-transform: uppercase;
@@ -97,10 +127,11 @@ body {
           padding: 0.5rem;
           border-radius: 0.3rem;
           margin: 0.5rem;
-          cursor: pointer;
+          transition: 0.3s linear;
           &:hover {
             font-weight: bold;
             letter-spacing: 0.1rem;
+            cursor: pointer;
           }
         }
       }
