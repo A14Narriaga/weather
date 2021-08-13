@@ -35,7 +35,7 @@ body {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     padding: 0.5rem 0;
     .header-container {
-      width: 635px;
+      max-width: 635px;
       margin: 0 auto;
       display: flex;
       justify-content: space-between;
